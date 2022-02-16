@@ -1,6 +1,6 @@
 **Instructions to setup:**
 
-1. git clone https://github.com/dsouzamanish/galaxseabackend
+1. git clone https://github.com/dsouzamanish/algoTest.git
 2. npm i
 3. npm run build
 4. npm run alienRansom 

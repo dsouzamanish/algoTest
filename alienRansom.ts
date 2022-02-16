@@ -23,23 +23,18 @@ function readLine(): string {
 function checkStringInclusion(ransomNote: number[], magzine: number[]): boolean {
     let map = new Map();
     for (let i = 0; i < magzine.length; i++) {
+        let count = 0;
         if(map.has(magzine[i])){
-           let count = map.get(magzine[i]);
-           map.set(magzine[i], ++count);
-        }else {
-            map.set(magzine[i], 1);
+            count = map.get(magzine[i]);
         }
+        map.set(magzine[i], ++count);
     }
     for (let i = 0; i < ransomNote.length; i++) {
-        if(!map.get(ransomNote[i])){
-         return false
-        }
         let count = map.get(ransomNote[i]);
-        if(count === 0){
-            return false;
+        if(!count) {
+          return false
         }
-        count--;
-        map.set(ransomNote[i], count);
+        map.set(ransomNote[i], --count);
     }
     return true;
 }
