@@ -1,0 +1,17 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "build": "tsc",
+    "alienRansom": "node dist/alienRansom.js"
+  },
+  "author": "Manish Dsouza",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "typescript": "^4.5.5"
+  }
+}
